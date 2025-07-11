@@ -42,6 +42,7 @@ struct ShotData {
 
 }
 
+@MainActor
 /// Placeholder class representing a connection to the Foresight GCQuad device.
 /// In a real implementation this would handle network or Bluetooth communication
 /// with the device and parse the shot data stream it provides.
