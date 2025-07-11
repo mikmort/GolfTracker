@@ -1,5 +1,6 @@
 import SwiftUI
 
+@MainActor
 struct ContentView: View {
     @State private var result = ""
     private let gcQuad = GCQuadManager()
