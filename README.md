@@ -9,6 +9,8 @@ An experimental iOS app that records golf shots and predicts ball flight.
 - Retrieves real-time wind information from the Open-Meteo API.
 - Predicts the landing position of the ball using the GCQuad carry distance and
   a simple wind adjustment.
+- Shot data now exposes most of the metrics produced by the GCQuad including
+  ball and club statistics.
 - Allows video recording of the swing using AVFoundation.
 
 This project is structured as a Swift Package so it can be developed in VS Code.

@@ -2,7 +2,6 @@ import CoreLocation
 
 /// Responsible for predicting where the ball will land using shot and weather data.
 final class BallTracker {
-
     /// Predicts the landing location of a shot using the carry distance
     /// reported by the GCQuad and a simple wind adjustment.
     ///
@@ -33,6 +32,7 @@ final class BallTracker {
             latitude: location.latitude + deltaLat,
             longitude: location.longitude
         )
+
 
     func predictLanding(shot: ShotData, from location: CLLocationCoordinate2D, wind: WindData) -> CLLocationCoordinate2D {
         // TODO: Replace with sophisticated physics model.
