@@ -40,16 +40,6 @@ struct ShotData {
     /// Dynamic loft at impact in degrees.
     let dynamicLoft: Double
 
-
-    /// Predicted carry distance in meters.
-    let carryDistance: Double
-    /// Launch angle of the shot in degrees.
-    let launchAngle: Double
-    /// Backspin in revolutions per minute.
-    let backspin: Double
-    /// Peak height of the ball flight in meters.
-    let peakHeight: Double
-
 }
 
 /// Placeholder class representing a connection to the Foresight GCQuad device.
@@ -78,15 +68,6 @@ final class GCQuadManager {
             faceAngle: -1.0,
             angleOfAttack: 2.5,
             dynamicLoft: 14.0
-        )
-
-        // This stub simply returns some fake data.
-
-        return ShotData(
-            carryDistance: 220,
-            launchAngle: 12.0,
-            backspin: 2500,
-            peakHeight: 30.0
         )
 
 
