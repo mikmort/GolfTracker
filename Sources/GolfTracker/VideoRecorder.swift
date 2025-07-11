@@ -46,10 +46,10 @@ final class VideoRecorder: NSObject, AVCaptureFileOutputRecordingDelegate {
 
     // MARK: - AVCaptureFileOutputRecordingDelegate
 
-    func fileOutput(_ output: AVCaptureFileOutput,
-                    didFinishRecordingTo outputFileURL: URL,
-                    from connections: [AVCaptureConnection],
-                    error: Error?) {
+    nonisolated func fileOutput(_ output: AVCaptureFileOutput,
+                               didFinishRecordingTo outputFileURL: URL,
+                               from connections: [AVCaptureConnection],
+                               error: Error?) {
         if let error = error {
             print("Recording error: \(error)")
         } else {

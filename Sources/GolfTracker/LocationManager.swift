@@ -19,13 +19,17 @@ final class LocationManager: NSObject, CLLocationManagerDelegate {
         }
     }
 
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        continuation?.resume(returning: locations.first?.coordinate)
-        continuation = nil
+    nonisolated func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        Task { @MainActor in
+            self.continuation?.resume(returning: locations.first?.coordinate)
+            self.continuation = nil
+        }
     }
 
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        continuation?.resume(returning: nil)
-        continuation = nil
+    nonisolated func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        Task { @MainActor in
+            self.continuation?.resume(returning: nil)
+            self.continuation = nil
+        }
     }
 }
