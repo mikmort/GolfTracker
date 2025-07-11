@@ -8,8 +8,6 @@ struct WindData {
 
 /// Retrieves weather information to account for wind effect on the ball.
 final class WeatherService {
-    /// Fetches wind data from the Open-Meteo public API.
-    /// Falls back to calm conditions on failure.
     func currentWind(at location: CLLocationCoordinate2D) async -> WindData {
         let urlString = "https://api.open-meteo.com/v1/forecast?latitude=\(location.latitude)&longitude=\(location.longitude)&current_weather=true"
         guard let url = URL(string: urlString) else {
@@ -39,7 +37,6 @@ final class WeatherService {
         } catch {
             print("Weather fetch failed: \(error)")
         }
-
         return WindData(speed: 0, direction: 0)
     }
 }
