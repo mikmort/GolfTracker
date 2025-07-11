@@ -1,5 +1,6 @@
 import AVFoundation
 
+@MainActor
 /// Records video of the golf swing using ``AVFoundation``. This basic
 /// implementation configures the default camera and writes a single movie file
 /// to the temporary directory.
