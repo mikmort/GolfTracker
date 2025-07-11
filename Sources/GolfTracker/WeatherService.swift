@@ -6,6 +6,7 @@ struct WindData {
     let direction: Double // degrees from north
 }
 
+@MainActor
 /// Retrieves weather information to account for wind effect on the ball.
 final class WeatherService {
     /// Fetches wind data from the Open-Meteo public API.
