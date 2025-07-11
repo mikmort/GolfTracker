@@ -39,7 +39,6 @@ final class WeatherService {
         } catch {
             print("Weather fetch failed: \(error)")
         }
-
         return WindData(speed: 0, direction: 0)
     }
 }
