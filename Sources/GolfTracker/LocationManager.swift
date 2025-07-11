@@ -1,5 +1,6 @@
 import CoreLocation
 
+@MainActor
 /// Provides the current GPS location using CoreLocation.
 final class LocationManager: NSObject, CLLocationManagerDelegate {
     private let manager = CLLocationManager()
