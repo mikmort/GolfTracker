@@ -1,6 +1,7 @@
 import Foundation
 
 struct ShotData {
+
     // MARK: Ball data
     /// Ball speed in meters per second.
     let ballSpeed: Double
@@ -38,6 +39,17 @@ struct ShotData {
     let angleOfAttack: Double
     /// Dynamic loft at impact in degrees.
     let dynamicLoft: Double
+
+
+    /// Predicted carry distance in meters.
+    let carryDistance: Double
+    /// Launch angle of the shot in degrees.
+    let launchAngle: Double
+    /// Backspin in revolutions per minute.
+    let backspin: Double
+    /// Peak height of the ball flight in meters.
+    let peakHeight: Double
+
 }
 
 /// Placeholder class representing a connection to the Foresight GCQuad device.
@@ -46,6 +58,7 @@ struct ShotData {
 final class GCQuadManager {
     func readShotData() async -> ShotData? {
         // TODO: Replace with real GCQuad integration.
+
         // This stub simply returns some representative data.
         return ShotData(
             ballSpeed: 65.0,
@@ -66,5 +79,16 @@ final class GCQuadManager {
             angleOfAttack: 2.5,
             dynamicLoft: 14.0
         )
+
+        // This stub simply returns some fake data.
+
+        return ShotData(
+            carryDistance: 220,
+            launchAngle: 12.0,
+            backspin: 2500,
+            peakHeight: 30.0
+        )
+
+
     }
 }

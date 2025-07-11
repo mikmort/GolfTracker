@@ -32,5 +32,14 @@ final class BallTracker {
             latitude: location.latitude + deltaLat,
             longitude: location.longitude
         )
+
+
+    func predictLanding(shot: ShotData, from location: CLLocationCoordinate2D, wind: WindData) -> CLLocationCoordinate2D {
+        // TODO: Replace with sophisticated physics model.
+        // This stub simply advances the latitude by a rough distance calculation.
+        let distanceMeters = shot.ballSpeed * cos(shot.launchAngle * .pi/180) * 0.5
+        let earthRadius = 6378137.0
+        let deltaLat = distanceMeters / earthRadius * 180 / .pi
+        return CLLocationCoordinate2D(latitude: location.latitude + deltaLat, longitude: location.longitude)
     }
 }
