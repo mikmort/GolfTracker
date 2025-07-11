@@ -6,7 +6,7 @@ An experimental iOS app that records golf shots and predicts ball flight.
 
 - Connects to the Foresight GCQuad launch monitor (placeholder implementation).
 - Records the GPS location of each shot using CoreLocation.
-- Retrieves real-time wind information (placeholder implementation).
+- Retrieves real-time wind information from the Open-Meteo API.
 - Predicts the landing position of the ball.
 - Allows video recording of the swing using AVFoundation.
 
