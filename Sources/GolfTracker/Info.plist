@@ -17,8 +17,8 @@
     <key>LSRequiresIPhoneOS</key>
     <true/>
     <key>NSCameraUsageDescription</key>
-    <string>Camera access is required to record your swing.</string>
+    <string>GolfTracker needs camera access to record your golf swing for analysis and improvement.</string>
     <key>NSLocationWhenInUseUsageDescription</key>
-    <string>Location access is required to tag each shot.</string>
+    <string>GolfTracker needs location access to tag each shot with GPS coordinates and provide accurate wind data for ball flight prediction.</string>
 </dict>
 </plist>
