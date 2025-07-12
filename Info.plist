@@ -1,0 +1,11 @@
+<!-- keys unrelated to life-cycle left untouched -->
+<dict>
+    …
+    <!-- removed storyboard & scene keys -->
+    <!--
+    <key>Application Scene Manifest</key>
+    <dict>…</dict>
+    <key>UIMainStoryboardFile</key>
+    <string>Main</string>
+    -->
+</dict>
