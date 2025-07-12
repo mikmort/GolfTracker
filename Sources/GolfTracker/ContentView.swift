@@ -22,14 +22,16 @@ struct ContentView: View {
     private func performTracking() async {
         print("Starting golf shot tracking workflow...")
         await videoRecorder.startRecording()
-        
+
+        let quad = gcQuad
+
         guard let shotLocation = await locationManager.currentLocation() else {
             result = "Failed to get location - check location permissions"
             await videoRecorder.stopRecording()
             return
         }
-        
-        guard let shotData = await gcQuad.readShotData() else {
+
+        guard let shotData = await quad.readShotData() else {
             result = "No shot data available"
             await videoRecorder.stopRecording()
             return
@@ -43,6 +45,8 @@ struct ContentView: View {
     }
 }
 
+#if DEBUG
 #Preview {
     ContentView()
 }
+#endif

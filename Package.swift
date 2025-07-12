@@ -10,10 +10,7 @@ let package = Package(
     targets: [
         .executableTarget(
             name: "GolfTracker",
-            path: "Sources/GolfTracker",
-            resources: [
-                .copy("Info.plist")
-            ]
+            path: "Sources/GolfTracker"
         )
     ]
 )
