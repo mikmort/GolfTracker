@@ -4,7 +4,7 @@ import SwiftUI
 struct GolfTrackerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView()      // the view that used to be launched from storyboard
         }
     }
 }
